@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flight Results | ÉKŌ-AIR & Services</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">ÉKŌ-AIR</div>
+  <div class="menu-toggle">☰</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="booking.html" class="active">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="results-section">
+  <h2>Available Flights</h2>
+  <p id="routeInfo">Searching flights...</p>
+
+  <!-- Loading Animation -->
+  <div id="loading" class="loading">
+    <i class="fa-solid fa-spinner"></i> Searching for flights...
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results" class="results hidden">
+
+    <!-- Flight Card Template -->
+    <div class="flight-card">
+      <div class="flight-left">
+        <h3><i class="fa-solid fa-plane"></i> Emirates</h3>
+        <p><strong>08:30</strong> — 14:10 (5h 40m)</p>
+        <p class="stops">Non-stop</p>
+      </div>
+
+      <div class="flight-right">
+        <h2 class="price">$620</h2>
+        <button class="btn choose">Choose Flight</button>
+      </div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-left">
+        <h3><i class="fa-solid fa-plane"></i> Qatar Airways</h3>
+        <p><strong>11:15</strong> — 18:50 (7h 35m)</p>
+        <p class="stops">1 stop • DOH</p>
+      </div>
+
+      <div class="flight-right">
+        <h2 class="price">$580</h2>
+        <button class="btn choose">Choose Flight</button>
+      </div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-left">
+        <h3><i class="fa-solid fa-plane"></i> British Airways</h3>
+        <p><strong>21:00</strong> — 06:30 (8h 30m)</p>
+        <p class="stops">Non-stop</p>
+      </div>
+
+      <div class="flight-right">
+        <h2 class="price">$699</h2>
+        <button class="btn choose">Choose Flight</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

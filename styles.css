@@ -1,0 +1,550 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url('Eko.jpg');
+  background-position: center;
+  border-image-repeat: repeat;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 10%;
+  background: whitesmoke;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #0052cc;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #222;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0052cc;
+}
+
+.menu-toggle {
+  font-size: 32px;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    right: 10%;
+    top: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.13);
+  }
+  nav ul.open {
+    display: flex;
+  }
+}
+/* GLOBAL SECTION STYLE (ABOUT, SERVICES, TESTIMONIALS, BOOKING, CONTACT) */
+section {
+  padding: 70px 10%;
+  background: rgba(255, 255, 255, 0.88); /* soft white overlay */
+  backdrop-filter: blur(4px);
+  margin: 40px auto;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #003f99;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+/* ABOUT PAGE STYLING */
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* SERVICES PAGE STYLING */
+.service-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.service-box h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0052cc;
+  margin-bottom: 10px;
+}
+
+/* BOOKING FORM PAGE */
+.booking-form {
+  background: #ffffff;
+  padding: 35px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 1rem;
+  margin: 12px 0;
+}
+
+/* CONTACT PAGE */
+.contact-box {
+  background: #ffffff;
+  padding: 35px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  margin: 12px 0;
+  font-size: 1rem;
+}
+/* CONTACT ICONS ROW */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.icon-box i {
+  font-size: 40px;
+  color: #0052cc;
+  margin-bottom: 12px;
+}
+
+.icon-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #003f99;
+}
+
+/* BUTTON STYLING FOR ALL FORMS */
+form .btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background: #0052cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form .btn:hover {
+  background: #003f99;
+}
+/* HERO */
+.hero {
+  background: transparent;
+  padding: 160px 10%;
+  border-radius: 12px;
+  margin: 25px 10%;
+  color: whitesmoke;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.20);
+}
+
+.hero h1 {
+  font-size: 3.0rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* FLIGHT SEARCH BOX */
+.search-box {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  margin: -70px auto 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.16);
+}
+
+.search-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #0052cc;
+  color: white;
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0b1f3c;
+}
+
+/* TESTIMONIAL CARDS */
+.test-card {
+  background: white;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.test-card i {
+  font-size: 2rem;
+  color: #0052cc;
+}
+.test-card {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.test-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;  /* Makes it a circle */
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #0077ff;
+}
+.stars {
+  font-size: 20px;
+  color: #ffcc00; /* gold stars */
+  margin: 5px 0 10px 0;
+  letter-spacing: 2px;
+}
+
+/* FADE ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Flight Results */
+.results-section {
+  padding: 40px;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #0052cc;
+  animation: spin 1s infinite linear;
+}
+
+.loading i {
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.hidden {display: none;}
+
+.flight-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.flight-left h3 {
+  font-size: 20px;
+}
+
+.flight-left .stops {
+  color: gray;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.flight-right {
+  text-align: right;
+}
+
+.price {
+  margin-bottom: 10px;
+  color: #0052cc;
+}
+
+.btn.choose {
+  background: #0052cc;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* -------------------------
+   DELUXE PREMIUM FOOTER
+-------------------------- */
+.footer.deluxe {
+  background: #001a35;
+  color: #fff;
+  padding: 70px 20px 20px;
+  margin-top: 60px;
+  border-top: 3px solid #004a99;
+}
+
+/* Newsletter */
+.footer-top {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-top h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: 260px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  background: #0078ff;
+  border: none;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #005fcc;
+}
+
+/* Footer Grid */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid #ffffff33;
+  padding-bottom: 8px;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #ffffffcc;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+/* Social Icons */
+.social a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 22px;
+  color: #ffffffcc;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #fb4408;
+  transform: translateY(-3px);
+}
+
+/* App Store buttons */
+.apps img {
+  width: 130px;
+  margin-top: 15px;
+  display: block;
+}
+
+/* Language + Currency */
+.selectors select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #002449;
+  color: #fff;
+  border: 1px solid #004a99;
+  border-radius: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #ffffff33;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #fff;
+  color: #1df36f;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.play-badge {
+    max-width: 100%;   /* scales down on smaller screens */
+    height: auto;      /* maintains aspect ratio */
+    display: block;    /* removes inline spacing issues */
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Booking | ÉKŌ-Air Services</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">ÉKŌ-AIR</div>
+  <div class="menu-toggle">☰</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="booking.html" class="active">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Book Your Flight</h2>
+  <p>Find affordable flights and travel in comfort ✈</p>
+
+  <div class="booking-form upgraded">
+
+    <!-- Trip Type -->
+    <div class="trip-type">
+      <label><input type="radio" name="trip" id="oneWay" checked> One Way</label>
+      <label><input type="radio" name="trip" id="roundTrip"> Round Trip</label>
+    </div>
+
+    <form>
+
+      <!-- From & To with Icons -->
+      <div class="input-icon-row">
+        <div class="input-icon">
+          <i class="fa-solid fa-plane-departure"></i>
+          <select required>
+            <option disabled selected>Departure Airport</option>
+            <option>Lagos (LOS)</option>
+            <option>Abuja (ABV)</option>
+            <option>Port Harcourt (PHC)</option>
+            <option>Accra (ACC)</option>
+            <option>Enugu (ENS)</option>
+            <option>Asaba (ASC)</option>
+            <option>Dubai (DXB)</option>
+            <option>London (LHR)</option>
+          </select>
+        </div>
+
+        <div class="input-icon">
+          <i class="fa-solid fa-plane-arrival"></i>
+          <select required>
+            <option disabled selected>Arrival Airport</option>
+            <option>Lagos (LOS)</option>
+            <option>Abuja (ABV)</option>
+            <option>Port Harcourt (PHC)</option>
+            <option>Accra (ACC)</option>
+            <option>Enugu (ENS)</option>
+            <option>Asaba (ASC)</option>
+            <option>Dubai (DXB)</option>
+            <option>London (LHR)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dates -->
+      <label>Departure Date</label>
+      <input type="date" id="departDate" required>
+
+      <label id="returnLabel">Return Date</label>
+      <input type="date" id="returnDate">
+
+      <!-- Passenger Counter -->
+      <div class="passenger-box">
+
+        <div class="passenger-type">
+          <p>Adults</p>
+          <div class="counter">
+            <button type="button" class="minus" data-type="adult">-</button>
+            <span id="adultCount">1</span>
+            <button type="button" class="plus" data-type="adult">+</button>
+          </div>
+        </div>
+
+        <div class="passenger-type">
+          <p>Children</p>
+          <div class="counter">
+            <button type="button" class="minus" data-type="child">-</button>
+            <span id="childCount">0</span>
+            <button type="button" class="plus" data-type="child">+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Travel Class -->
+      <label>Travel Class</label>
+      <select>
+        <option>Economy</option>
+        <option>Premium Economy</option>
+        <option>Business Class</option>
+        <option>First Class</option>
+      </select>
+
+      <button class="btn">Search Flights</button>
+    </form>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
